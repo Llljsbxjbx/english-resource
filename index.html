@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学英语期中复习知识点资料库 | 1-6年级全覆盖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #818CF8;
+            --primary-dark: #3730A3;
+            --accent: #F59E0B;
+            --accent-light: #FCD34D;
+            --success: #10B981;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* 顶部横幅 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, #5B21B6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 导航筛选 */
+        .filter-section {
+            background: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-tab {
+            padding: 10px 20px;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            background: white;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-tab:hover {
+            border-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .filter-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* 主内容区 */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 版本分组 */
+        .version-section {
+            margin-bottom: 50px;
+        }
+
+        .version-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .version-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .version-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .version-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* 卡片网格 */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        /* 资料卡片 */
+        .resource-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-header .semester {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .card-features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .card-features li:last-child {
+            border-bottom: none;
+        }
+
+        .card-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        .download-btn {
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+        }
+
+        .download-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-tips {
+            text-align: left;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        .footer-tips h4 {
+            margin-bottom: 12px;
+            color: var(--accent-light);
+        }
+
+        .footer-tips ul {
+            list-style: none;
+        }
+
+        .footer-tips li {
+            padding: 6px 0;
+            opacity: 0.9;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-tab {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* 加载动画 */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .loading-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* 提示消息 */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--text-primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            z-index: 1001;
+            transition: transform 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>📚 小学英语期中复习知识点资料库</h1>
+            <p>覆盖人教版、外研版、译林版等主流教材版本，1-6年级全年级收录，助力孩子期中考试冲刺！</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">教材版本</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">36+</div>
+                    <div class="stat-label">年级资料</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">免费下载</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 筛选导航 -->
+    <nav class="filter-section">
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">全部版本</button>
+                <button class="filter-tab" data-filter="pep">人教版 PEP</button>
+                <button class="filter-tab" data-filter="wy">外研版</button>
+                <button class="filter-tab" data-filter="yl">译林版</button>
+                <button class="filter-tab" data-filter="jj">冀教版</button>
+                <button class="filter-tab" data-filter="bs">北师大版</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 人教版 -->
+        <section class="version-section" data-version="pep">
+            <div class="version-header">
+                <div class="version-icon">人</div>
+                <div>
+                    <h2 class="version-title">人教版 PEP</h2>
+                    <p class="version-desc">人民教育出版社出版，全国最广泛使用的教材版本</p>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <!-- 一年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">一年级</span>
+                        <h3>人教版 PEP · 上册</h3>
+                        <p class="semester">一年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>26个字母认读与书写</li>
+                            <li>基础问候语和自我介绍</li>
+                            <li>数字1-10表达</li>
+                            <li>颜色和文具类词汇</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-1a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 一年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">一年级</span>
+                        <h3>人教版 PEP · 下册</h3>
+                        <p class="semester">一年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>家庭成员称呼</li>
+                            <li>身体部位词汇</li>
+                            <li>11-20数字表达</li>
+                            <li>简单指令语句</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-1b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 二年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">二年级</span>
+                        <h3>人教版 PEP · 上册</h3>
+                        <p class="semester">二年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>学校场所和设施</li>
+                            <li>学科科目词汇</li>
+                            <li>时间表达（整点、半点）</li>
+                            <li>方位介词基础</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-2a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 二年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">二年级</span>
+                        <h3>人教版 PEP · 下册</h3>
+                        <p class="semester">二年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>季节和天气表达</li>
+                            <li>衣物类词汇</li>
+                            <li>形容词比较级入门</li>
+                            <li>现在进行时初识</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-2b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 三年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>人教版 PEP · 上册</h3>
+                        <p class="semester">三年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>重点单词默写表</li>
+                            <li>单元语法精讲</li>
+                            <li>句型转换练习</li>
+                            <li>情景交际对话</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-3a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 三年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>人教版 PEP · 下册</h3>
+                        <p class="semester">三年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>be动词用法总结</li>
+                            <li>方位介词进阶</li>
+                            <li>基数词与序数词</li>
+                            <li>一般现在时讲解</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-3b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>人教版 PEP · 上册</h3>
+                        <p class="semester">四年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li> Unit 1-3 重点词汇</li>
+                            <li>祈使句用法归纳</li>
+                            <li>可数与不可数名词</li>
+                            <li>问答句型汇总</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-4a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>人教版 PEP · 下册</h3>
+                        <p class="semester">四年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>特殊疑问词用法</li>
+                            <li>现在进行时精讲</li>
+                            <li>情态动词 can 用法</li>
+                            <li>阅读理解技巧</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-4b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>人教版 PEP · 上册</h3>
+                        <p class="semester">五年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>五年级核心语法</li>
+                            <li>形容词比较级详解</li>
+                            <li>there be 句型</li>
+                            <li>写作句型模板</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-5a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>人教版 PEP · 下册</h3>
+                        <p class="semester">五年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>一般过去时精讲</li>
+                            <li>动词过去式不规则变化</li>
+                            <li>时间介词用法辨析</li>
+                            <li>完形填空技巧</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-5b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>人教版 PEP · 上册</h3>
+                        <p class="semester">六年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>六年级全册语法汇总</li>
+                            <li>时态综合复习</li>
+                            <li>小升初高频考点</li>
+                            <li>易错题归纳</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-6a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>人教版 PEP · 下册</h3>
+                        <p class="semester">六年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>小升初总复习资料</li>
+                            <li>小学阶段语法体系</li>
+                            <li>核心词汇总复习</li>
+                            <li>模拟试题精编</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('pep-6b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 外研版 -->
+        <section class="version-section" data-version="wy">
+            <div class="version-header">
+                <div class="version-icon">外</div>
+                <div>
+                    <h2 class="version-title">外研版</h2>
+                    <p class="version-desc">外语教学与研究出版社出版，注重语言实际运用能力</p>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <!-- 三年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>外研版 · 上册</h3>
+                        <p class="semester">三年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 词汇短语</li>
+                            <li>基本句型结构</li>
+                            <li>礼貌用语表达</li>
+                            <li>听力场景词汇</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-3a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 三年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>外研版 · 下册</h3>
+                        <p class="semester">三年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 重点归纳</li>
+                            <li>名词单复数变化</li>
+                            <li>This/That 用法</li>
+                            <li>就近就远原则</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-3b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>外研版 · 上册</h3>
+                        <p class="semester">四年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 语法精讲</li>
+                            <li>There be 句型进阶</li>
+                            <li>方位介词汇总</li>
+                            <li>阅读理解训练</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-4a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>外研版 · 下册</h3>
+                        <p class="semester">四年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 知识清单</li>
+                            <li>一般过去时引入</li>
+                            <li>动词过去式变化规则</li>
+                            <li>写作话题词汇</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-4b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>外研版 · 上册</h3>
+                        <p class="semester">五年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 语法突破</li>
+                            <li>will 将来时用法</li>
+                            <li>形容词副词辨析</li>
+                            <li>完形填空技巧</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-5a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>外研版 · 下册</h3>
+                        <p class="semester">五年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 重点回顾</li>
+                            <li>现在完成时入门</li>
+                            <li>现在分词变化规则</li>
+                            <li>阅读策略指导</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-5b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>外研版 · 上册</h3>
+                        <p class="semester">六年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-5 知识体系</li>
+                            <li>六年级语法总复习</li>
+                            <li>高频考点归纳</li>
+                            <li>易混知识点辨析</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-6a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>外研版 · 下册</h3>
+                        <p class="semester">六年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>小升初总复习资料</li>
+                            <li>小学语法完整体系</li>
+                            <li>核心词汇总表</li>
+                            <li>冲刺模拟题</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('wy-6b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 译林版 -->
+        <section class="version-section" data-version="yl">
+            <div class="version-header">
+                <div class="version-icon">译</div>
+                <div>
+                    <h2 class="version-title">译林版</h2>
+                    <p class="version-desc">江苏译林出版社出版，以故事教学为特色</p>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <!-- 三年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>译林版 · 上册</h3>
+                        <p class="semester">三年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 词汇表</li>
+                            <li>be动词和人称代词</li>
+                            <li>指示代词 this/that</li>
+                            <li>课堂用语汇总</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-3a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 三年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>译林版 · 下册</h3>
+                        <p class="semester">三年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 重点知识</li>
+                            <li>可数名词复数变化</li>
+                            <li>There be 句型入门</li>
+                            <li>情态动词 can</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-3b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>译林版 · 上册</h3>
+                        <p class="semester">四年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 语法归纳</li>
+                            <li>特殊疑问词用法</li>
+                            <li>方位介词详解</li>
+                            <li>阅读技能训练</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-4a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>译林版 · 下册</h3>
+                        <p class="semester">四年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 知识清单</li>
+                            <li>现在进行时精讲</li>
+                            <li>动词-ing变化规则</li>
+                            <li>话题作文模板</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-4b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>译林版 · 上册</h3>
+                        <p class="semester">五年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 语法突破</li>
+                            <li>一般过去时详解</li>
+                            <li>规则/不规则动词过去式</li>
+                            <li>完形填空方法</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-5a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>译林版 · 下册</h3>
+                        <p class="semester">五年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 知识回顾</li>
+                            <li>形容词比较级最高级</li>
+                            <li>数量表达 some/any</li>
+                            <li>写作技巧指导</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-5b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级上 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>译林版 · 上册</h3>
+                        <p class="semester">六年级上学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Unit 1-4 知识体系</li>
+                            <li>六年级语法总汇</li>
+                            <li>小升初高频考点</li>
+                            <li>易错题归纳</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-6a')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级下 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>译林版 · 下册</h3>
+                        <p class="semester">六年级下学期期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>小升初全面复习</li>
+                            <li>小学语法完整梳理</li>
+                            <li>核心词汇总复习</li>
+                            <li>冲刺模拟题库</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('yl-6b')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 冀教版 -->
+        <section class="version-section" data-version="jj">
+            <div class="version-header">
+                <div class="version-icon">冀</div>
+                <div>
+                    <h2 class="version-title">冀教版</h2>
+                    <p class="version-desc">河北教育出版社出版，贴近生活实际</p>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <!-- 三年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>冀教版 · 三年级</h3>
+                        <p class="semester">三年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Lesson 1-12 词汇汇总</li>
+                            <li>基础句型练习</li>
+                            <li>字母书写规范</li>
+                            <li>日常交际用语</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('jj-3')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>冀教版 · 四年级</h3>
+                        <p class="semester">四年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Lesson 1-12 语法点</li>
+                            <li>名词所有格用法</li>
+                            <li>介词短语汇总</li>
+                            <li>阅读理解训练</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('jj-4')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>冀教版 · 五年级</h3>
+                        <p class="semester">五年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Lesson 1-12 知识要点</li>
+                            <li>时态综合练习</li>
+                            <li>从句入门讲解</li>
+                            <li>写作素材积累</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('jj-5')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>冀教版 · 六年级</h3>
+                        <p class="semester">六年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>小升初总复习资料</li>
+                            <li>小学语法全覆盖</li>
+                            <li>高频考点冲刺</li>
+                            <li>模拟试题精编</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('jj-6')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 北师大版 -->
+        <section class="version-section" data-version="bs">
+            <div class="version-header">
+                <div class="version-icon">北</div>
+                <div>
+                    <h2 class="version-title">北师大版</h2>
+                    <p class="version-desc">北京师范大学出版社出版，注重能力培养</p>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <!-- 三年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">三年级</span>
+                        <h3>北师大版 · 三年级</h3>
+                        <p class="semester">三年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-3 词汇表</li>
+                            <li>基础语法点拨</li>
+                            <li>句型结构分析</li>
+                            <li>趣味练习设计</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('bs-3')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 四年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">四年级</span>
+                        <h3>北师大版 · 四年级</h3>
+                        <p class="semester">四年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-3 语法归纳</li>
+                            <li>重点词汇用法</li>
+                            <li>阅读技巧训练</li>
+                            <li>综合能力提升</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('bs-4')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 五年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">五年级</span>
+                        <h3>北师大版 · 五年级</h3>
+                        <p class="semester">五年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>Module 1-3 知识要点</li>
+                            <li>语法难点突破</li>
+                            <li>写作能力培养</li>
+                            <li>应试技巧指导</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('bs-5')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 六年级 -->
+                <div class="resource-card">
+                    <div class="card-header">
+                        <span class="grade-badge">六年级</span>
+                        <h3>北师大版 · 六年级</h3>
+                        <p class="semester">六年级全册期中知识点</p>
+                    </div>
+                    <div class="card-body">
+                        <ul class="card-features">
+                            <li>小升初系统复习</li>
+                            <li>知识网络构建</li>
+                            <li>专项能力训练</li>
+                            <li>冲刺模拟测试</li>
+                        </ul>
+                        <button class="download-btn" onclick="downloadResource('bs-6')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            下载 PDF 资料
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>📖 使用说明</h3>
+            <p>点击任意资料卡片上的「下载 PDF 资料」按钮，即可获取该年级版本的期中复习知识点PDF文件。</p>
+            <div class="footer-tips">
+                <h4>💡 复习建议</h4>
+                <ul>
+                    <li>• 先通读知识点，建立知识框架</li>
+                    <li>• 结合课本例句，理解语法要点</li>
+                    <li>• 完成配套练习，巩固所学知识</li>
+                    <li>• 考前回顾易错点，查漏补缺</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast 提示 -->
+    <div class="toast" id="toast">正在跳转下载...</div>
+
+    <script>
+        // 资源下载链接映射（跳转至权威资源网站）
+        const resourceLinks = {
+            // 人教版
+            'pep-1a': 'https://max.book118.com/html/2021/0910/5224310231004002.shtm',
+            'pep-1b': 'https://max.book118.com/html/2021/0910/5224310231004002.shtm',
+            'pep-2a': 'https://wenku.baidu.com/view/1c9dc2c20a1c59eef8c75fbfc77da26924c59600.html',
+            'pep-2b': 'https://wenku.baidu.com/view/1c9dc2c20a1c59eef8c75fbfc77da26924c59600.html',
+            'pep-3a': 'https://zy.21cnjy.com/17767917',
+            'pep-3b': 'https://wenku.baidu.com/view/1c9dc2c20a1c59eef8c75fbfc77da26924c59600.html',
+            'pep-4a': 'https://wenku.baidu.com/view/1c9dc2c20a1c59eef8c75fbfc77da26924c59600.html',
+            'pep-4b': 'https://wenku.baidu.com/view/1c9dc2c20a1c59eef8c75fbfc77da26924c59600.html',
+            'pep-5a': 'https://wenku.baidu.com/view/1c9dc2c20a1c59eef8c75fbfc77da26924c59600.html',
+            'pep-5b': 'https://doc.quark.cn/preview/jiaoyukaoshi-biji-K12/25D80481098C628D6C28B66AF319745C',
+            'pep-6a': 'https://wenku.baidu.com/view/95b8f9d90166f5335a8102d276a20029bc646307.html',
+            'pep-6b': 'https://doc.quark.cn/preview/jiaoyukaoshi-biji-K12/5AF198A361836B8DE45F58CD9E3FB2BB',
+
+            // 外研版
+            'wy-3a': 'https://doc.quark.cn/preview/jiaoyukaoshi-biji-K12/93F77A9D89E9FF7E09947D72562D6129',
+            'wy-3b': 'https://wenku.baidu.com/view/7086addffa0f76c66137ee06eff9aef8941e482e.html',
+            'wy-4a': 'https://wenku.baidu.com/view/7086addffa0f76c66137ee06eff9aef8941e482e.html',
+            'wy-4b': 'https://zhuanlan.zhihu.com/p/25394887178',
+            'wy-5a': 'https://www.zxxk.com/soft/22461074.html',
+            'wy-5b': 'https://www.zxxk.com/soft/22461074.html',
+            'wy-6a': 'https://max.book118.com/html/2024/0823/7063136161006144.shtm',
+            'wy-6b': 'https://max.book118.com/html/2024/0823/7063136161006144.shtm',
+
+            // 译林版
+            'yl-3a': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-3b': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-4a': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-4b': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-5a': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-5b': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-6a': 'https://www.zxxk.com/soft/22461074.html',
+            'yl-6b': 'https://www.zxxk.com/soft/22461074.html',
+
+            // 冀教版
+            'jj-3': 'https://wenku.baidu.com/view/9894b6ef132de2bd960590c69ec3d5bbfd0adaf4.html',
+            'jj-4': 'https://www.docin.com/p-4666296176.html',
+            'jj-5': 'https://www.docin.com/p-4666296176.html',
+            'jj-6': 'https://www.docin.com/p-4666296176.html',
+
+            // 北师大版
+            'bs-3': 'https://www.zxxk.com/docpack/2568094.html',
+            'bs-4': 'https://www.zxxk.com/docpack/2568094.html',
+            'bs-5': 'https://www.zxxk.com/docpack/2568094.html',
+            'bs-6': 'https://www.zxxk.com/docpack/2568094.html'
+        };
+
+        // 版本筛选功能
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 更新激活状态
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                const sections = document.querySelectorAll('.version-section');
+
+                sections.forEach(section => {
+                    if (filter === 'all') {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = section.dataset.version === filter ? 'block' : 'none';
+                    }
+                });
+
+                // 滚动到顶部
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // 下载资源函数
+        function downloadResource(resourceId) {
+            const link = resourceLinks[resourceId];
+            if (link) {
+                // 显示提示
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2000);
+
+                // 延迟跳转，让用户看到提示
+                setTimeout(() => {
+                    window.open(link, '_blank');
+                }, 500);
+            } else {
+                alert('该资源正在整理中，请稍后再试！');
+            }
+        }
+
+        // 卡片悬停效果增强
+        document.querySelectorAll('.resource-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
